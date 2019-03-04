@@ -1,0 +1,9 @@
+<a class="btn btn-outline-info" href="/">All</a>
+<% for genre in Genre.all %>
+  <a class="btn btn-outline-info" href="/genres/<%= genre.id %>"><%= genre.name %></a>
+<% end %>
+<div class="row">
+  <% for movie in @all_movies %>
+    <div class="col-sm-2 mt-3"><a href="/movies/<%= movie.id %>"><img class="img-fluid img-thumbnail" src="<%= movie.poster %>"></a></div>
+  <% end %>
+</div>
